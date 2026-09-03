@@ -46,6 +46,9 @@
 }
 
 .topbar__inner {
+  width: 100%;
+  max-width: none;
+  padding-inline: clamp(1rem, 3vw, 2.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
