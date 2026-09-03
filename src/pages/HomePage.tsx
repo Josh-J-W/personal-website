@@ -27,8 +27,12 @@ export function HomePage() {
               <Link to="/about" className="button button--secondary">About me</Link>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="hero__panel" aria-label="Current interests">
+      <section className="section-spacing interests-panel" aria-label="Current interests">
+        <div className="container">
+          <div className="hero__panel">
             <p className="panel-label">Currently exploring</p>
             <ul className="interest-list">
               {currentInterests.map((item) => (
