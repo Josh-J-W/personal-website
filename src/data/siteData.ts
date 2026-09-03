@@ -53,7 +53,7 @@ export const siteConfig = {
   intro:
     'I am a multidisciplinary learner who likes to collect experiences, make things, and spend time in the spaces between disciplines.',
   email: 'hello@example.com',
-  github: 'https://github.com/yourname',
+  github: 'https://github.com/Josh-J-W/personal-website',
   linkedin: 'https://www.linkedin.com/in/yourname',
   instagram: 'https://www.instagram.com/yourname',
   location: 'Based between London and wherever the next train takes me.',

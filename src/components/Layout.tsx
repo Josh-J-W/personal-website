@@ -4,10 +4,11 @@ import { navItems, siteConfig } from '../data/siteData'
 export function Layout() {
   return (
     <div className="site-shell">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="topbar">
         <div className="topbar__inner container">
           <NavLink to="/" className="brand" aria-label="Go to home page">
-            <span className="brand__mark">AQ</span>
+            <span className="brand__mark">JW</span>
             <span className="brand__text">{siteConfig.name}</span>
           </NavLink>
 
@@ -25,7 +26,7 @@ export function Layout() {
         </div>
       </header>
 
-      <main className="page-frame">
+      <main id="main-content" className="page-frame">
         <Outlet />
       </main>
 

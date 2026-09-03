@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: 'Avenir Next', 'Century Gothic', 'Trebuchet MS', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: #f5f0ea;
@@ -38,6 +38,11 @@ body {
     var(--page-bg);
   color: var(--text-main);
   letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--page-bg);
 }
 
 img {

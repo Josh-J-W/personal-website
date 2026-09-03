@@ -57,8 +57,8 @@ export function ProjectsPage() {
                   <span>{project.status}</span>
                 </div>
                 <div className="project-card__actions">
-                  {project.links.live ? <a href={project.links.live}>Live</a> : null}
-                  {project.links.source ? <a href={project.links.source}>Source</a> : null}
+                  {project.links.live && project.links.live !== '#' ? <a href={project.links.live}>Live</a> : null}
+                  {project.links.source && project.links.source !== '#' ? <a href={project.links.source}>Source</a> : null}
                 </div>
               </div>
             </article>
