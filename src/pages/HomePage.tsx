@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { PageMeta } from '../components/PageMeta'
 import { currentInterests, projects, photography, blogPosts, siteConfig } from '../data/siteData'
+import heroImage from '../assets/hero.png'
 
 export function HomePage() {
   const featuredProjects = projects.filter((project) => project.featured).slice(0, 2)
@@ -10,11 +11,14 @@ export function HomePage() {
   return (
     <>
       <PageMeta title="Josh Winkel | Home" description="Personal portfolio exploring travel, photography, writing, and technology." />
-      <section className="hero section-spacing">
+      <section className="hero hero--image" aria-labelledby="hero-title">
+        <div className="hero__image-wrap" aria-hidden="true">
+          <img className="hero__image" src={heroImage} alt="" />
+        </div>
         <div className="container hero__grid">
           <div className="hero__content">
-            <p className="eyebrow">A life in motion</p>
-            <h1>{siteConfig.title}</h1>
+            <p className="eyebrow">A life in motion / 01</p>
+            <h1 id="hero-title">{siteConfig.title}</h1>
             <p className="lede">
               {siteConfig.intro}
             </p>

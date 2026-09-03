@@ -113,11 +113,65 @@
   border-color: rgba(255, 255, 255, 0.06);
 }
 
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero--image {
+  min-height: min(820px, calc(100svh - 4.25rem));
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(23, 20, 17, 0.98) 0%, rgba(23, 20, 17, 0.84) 36%, rgba(23, 20, 17, 0.22) 100%),
+    radial-gradient(circle at 68% 44%, rgba(58, 91, 95, 0.44), transparent 32%),
+    #171411;
+}
+
+.hero--image::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 18%;
+  z-index: -1;
+  background: linear-gradient(transparent, var(--page-bg));
+}
+
+.hero__image-wrap {
+  position: absolute;
+  inset: 0 0 0 38%;
+  z-index: -1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.hero__image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 14% 18%;
+  border: 1px solid rgba(245, 240, 234, 0.14);
+  border-radius: 50%;
+  transform: rotate(-12deg) scaleY(0.58);
+}
+
+.hero__image {
+  width: min(64vw, 620px);
+  max-width: none;
+  opacity: 0.78;
+  filter: saturate(0.82) contrast(1.08);
+  animation: hero-drift 12s ease-in-out infinite alternate;
+}
+
 .hero__grid {
+  width: 100%;
   display: grid;
   grid-template-columns: 1.6fr 0.9fr;
   gap: 2rem;
   align-items: end;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
 }
 
 .hero__content,
@@ -799,6 +853,32 @@
   .main-nav {
     justify-content: flex-start;
   }
+
+  .hero--image {
+    min-height: calc(100svh - 8rem);
+  }
+
+  .hero__image-wrap {
+    inset: 4rem 0 auto;
+    height: 58%;
+    opacity: 0.52;
+    align-items: start;
+  }
+
+  .hero--image {
+    background:
+      linear-gradient(180deg, rgba(23, 20, 17, 0.66), rgba(23, 20, 17, 0.96) 88%),
+      #171411;
+  }
+
+  .hero__grid {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero__image {
+    width: min(88vw, 440px);
+  }
 }
 
 @keyframes reveal-up {
@@ -809,6 +889,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes hero-drift {
+  from {
+    transform: translate3d(-1.5%, 1%, 0) rotate(-2deg);
+  }
+  to {
+    transform: translate3d(1.5%, -1%, 0) rotate(2deg);
   }
 }
 
