@@ -57,6 +57,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
+  flex-shrink: 0;
   color: var(--text-main);
   text-decoration: none;
   font-weight: 600;
@@ -88,6 +89,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-left: auto;
   gap: 0.35rem;
 }
 
