@@ -1,75 +1,73 @@
 import { PageMeta } from '../components/PageMeta'
-import { aboutSections } from '../data/siteData'
+import { resume, siteConfig } from '../data/siteData'
 
 export function AboutPage() {
   return (
     <>
-      <PageMeta title="About | Josh Winkel" description="A personal profile covering interests, education, skills, language learning, and travel." />
+      <PageMeta title="Resume | Josh Winkel" description="Resume of Josh Winkel, a linguistics graduate focused on language, communication, and content creation." />
       <div className="container page-shell">
-      <header className="page-header">
-        <p className="eyebrow">About</p>
-        <h1>Curious by default.</h1>
+      <header className="page-header resume-header">
+        <p className="eyebrow">Resume</p>
+        <h1>{siteConfig.name}</h1>
+        <p className="resume-header__headline">{resume.headline}</p>
+        <p className="resume-header__location">{siteConfig.location}</p>
       </header>
 
-      <section className="content-block">
-        <p>{aboutSections.intro}</p>
-      </section>
+      <div className="resume-layout">
+        <aside className="resume-sidebar">
+          <section className="resume-section">
+            <h2>Contact</h2>
+            <div className="resume-contact">
+              <a href="tel:+13312232679">331-223-2679</a>
+              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+              <a href={siteConfig.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </section>
+          <section className="resume-section">
+            <h2>Skills</h2>
+            <ul className="resume-list resume-list--compact">
+              {resume.skills.map((skill) => <li key={skill}>{skill}</li>)}
+            </ul>
+          </section>
+          <section className="resume-section">
+            <h2>Languages</h2>
+            <ul className="resume-list resume-list--compact">
+              {resume.languages.map((language) => <li key={language.name}><strong>{language.name}</strong><span>{language.level}</span></li>)}
+            </ul>
+          </section>
+          <section className="resume-section">
+            <h2>Certifications</h2>
+            <ul className="resume-list">{resume.certifications.map((item) => <li key={item}>{item}</li>)}</ul>
+          </section>
+          <section className="resume-section">
+            <h2>Honors & Awards</h2>
+            <ul className="resume-list">{resume.honors.map((item) => <li key={item}>{item}</li>)}</ul>
+          </section>
+        </aside>
 
-      <div className="split-grid">
-        <section className="content-block">
-          <h2>Education</h2>
-          <ul className="info-list">
-            {aboutSections.education.map((item) => (
-              <li key={`${item.institution}-${item.period}`}>
-                <strong>{item.institution}</strong>
-                <span>{item.degree}</span>
-                <em>{item.period}</em>
-                <p>{item.notes}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="content-block">
-          <h2>Skills</h2>
-          <div className="chip-list">
-            {aboutSections.skills.map((skill) => (
-              <span key={skill} className="chip">{skill}</span>
-            ))}
-          </div>
-        </section>
-      </div>
-
-      <div className="split-grid">
-        <section className="content-block">
-          <h2>Currently learning</h2>
-          <ul className="bullet-list">
-            {aboutSections.learning.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-        </section>
-
-        <section className="content-block">
-          <h2>Languages</h2>
-          <ul className="bullet-list">
-            {aboutSections.languages.map((language) => <li key={language}>{language}</li>)}
-          </ul>
-        </section>
-      </div>
-
-      <div className="split-grid">
-        <section className="content-block">
-          <h2>Travel</h2>
-          <ul className="bullet-list">
-            {aboutSections.travel.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-        </section>
-
-        <section className="content-block">
-          <h2>Personal interests</h2>
-          <ul className="bullet-list">
-            {aboutSections.personalInterests.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-        </section>
+        <main className="resume-main">
+          <section className="resume-section resume-section--main">
+            <h2>Summary</h2>
+            <p className="resume-summary">{resume.summary}</p>
+          </section>
+          <section className="resume-section resume-section--main">
+            <h2>Experience</h2>
+            <div className="resume-entries">
+              {resume.experience.map((item) => (
+                <article className="resume-entry" key={`${item.organization}-${item.role}`}>
+                  <div className="resume-entry__heading"><div><h3>{item.organization}</h3><p className="resume-entry__role">{item.role}</p></div><div className="resume-entry__meta"><span>{item.period}</span><span>{item.location}</span></div></div>
+                  <ul className="resume-list resume-list--bulleted">{item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resume-section resume-section--main">
+            <h2>Education</h2>
+            <div className="resume-entries">
+              {resume.education.map((item) => <article className="resume-entry resume-entry--education" key={`${item.institution}-${item.period}`}><div className="resume-entry__heading"><div><h3>{item.institution}</h3><p className="resume-entry__role">{item.degree}</p>{item.detail && <p className="resume-entry__detail">{item.detail}</p>}</div><span className="resume-entry__meta">{item.period}</span></div></article>)}
+            </div>
+          </section>
+        </main>
       </div>
     </div>
     </>

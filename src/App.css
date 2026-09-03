@@ -177,6 +177,7 @@
   gap: 2rem;
   align-items: end;
   padding-top: 7rem;
+  padding-inline: clamp(1.5rem, 6vw, 5rem);
   padding-bottom: 4rem;
 }
 
@@ -599,6 +600,170 @@
   padding: 4rem 0 5rem;
 }
 
+.resume-header {
+  margin-bottom: 2.5rem;
+}
+
+.resume-header h1 {
+  margin-bottom: 0.6rem;
+}
+
+.resume-header__headline,
+.resume-header__location {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.resume-header__headline {
+  font-size: 1.2rem;
+}
+
+.resume-header__location {
+  margin-top: 0.25rem;
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.7fr) minmax(0, 1.8fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.resume-sidebar {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-sidebar .resume-section:last-child,
+.resume-main .resume-section:last-child {
+  margin-bottom: 0;
+}
+
+.resume-section h2 {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.resume-section--main {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-section--main + .resume-section--main {
+  padding-top: 0.25rem;
+}
+
+.resume-contact,
+.resume-list {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.resume-contact a {
+  color: var(--text-soft);
+  overflow-wrap: anywhere;
+}
+
+.resume-contact a:hover,
+.resume-contact a:focus-visible {
+  color: var(--text-main);
+}
+
+.resume-list li {
+  color: var(--text-soft);
+  line-height: 1.45;
+}
+
+.resume-list--compact li {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.resume-list--compact span {
+  font-size: 0.84rem;
+  color: rgba(245, 240, 234, 0.56);
+}
+
+.resume-summary {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.resume-entries {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.resume-entry {
+  padding-left: 1.1rem;
+  border-left: 2px solid rgba(216, 179, 141, 0.32);
+}
+
+.resume-entry__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.resume-entry h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+}
+
+.resume-entry__role,
+.resume-entry__detail {
+  margin: 0.3rem 0 0;
+  color: var(--text-soft);
+}
+
+.resume-entry__detail {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.resume-entry__meta {
+  display: grid;
+  flex-shrink: 0;
+  align-content: start;
+  gap: 0.2rem;
+  text-align: right;
+  color: rgba(245, 240, 234, 0.56);
+  font-size: 0.82rem;
+}
+
+.resume-list--bulleted {
+  margin-top: 0.9rem;
+  gap: 0.45rem;
+}
+
+.resume-list--bulleted li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.resume-list--bulleted li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
 .narrow-shell {
   max-width: 64rem;
 }
@@ -838,7 +1003,8 @@
   .split-grid,
   .feature-grid,
   .blog-card,
-  .project-strip {
+  .project-strip,
+  .resume-layout {
     grid-template-columns: 1fr;
   }
 
@@ -870,6 +1036,7 @@
   }
 
   .hero__image-wrap {
+    object-position: 58% 72%;
     inset: 0;
     opacity: 1;
   }
@@ -883,6 +1050,15 @@
   .hero__grid {
     padding-top: 5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .resume-entry__heading {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .resume-entry__meta {
+    text-align: left;
   }
 }
 

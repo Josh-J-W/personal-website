@@ -18,7 +18,7 @@ export function HomePage() {
         <div className="container hero__grid">
           <div className="hero__content">
             <p className="eyebrow">A life in motion / 01</p>
-            <h1 id="hero-title">{siteConfig.title}</h1>
+            <h1 id="hero-title">{siteConfig.name}</h1>
             <p className="lede">
               {siteConfig.intro}
             </p>

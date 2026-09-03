@@ -49,14 +49,14 @@ export interface BlogPost {
 
 export const siteConfig = {
   name: 'Josh Winkel',
-  title: 'Curious about languages, places, images, ideas, and everything in between.',
+  title: 'Linguistics, language, and thoughtful communication.',
   intro:
     'I am a multidisciplinary learner who likes to collect experiences, make things, and spend time in the spaces between disciplines.',
-  email: 'hello@example.com',
+  email: 'joshua.j.winkel@gmail.com',
   github: 'https://github.com/Josh-J-W/personal-website',
-  linkedin: 'https://www.linkedin.com/in/yourname',
+  linkedin: 'https://www.linkedin.com/in/joshua-winkel/',
   instagram: 'https://www.instagram.com/yourname',
-  location: 'Based between London and wherever the next train takes me.',
+  location: 'Greater Chicago Area',
 }
 
 export const navItems: NavItem[] = [
@@ -77,37 +77,58 @@ export const currentInterests = [
   'Collecting ideas, objects, and good references',
 ]
 
-export const aboutSections = {
-  intro:
-    'I am interested in the overlap between culture, technology, and lived experience. I like building things, learning new frameworks of thought, and paying attention to the details that make a place feel alive.',
+export const resume = {
+  headline: "B.A. Linguistics | Iowa State University '26 Graduate",
+  summary:
+    'Recent summa cum laude graduate from Iowa State University with a Bachelor of Arts in Linguistics and minors in General Business and Chinese Studies: Languages and Cultures for Professions.',
+  skills: ['Linguistics', 'Chinese Studies', 'Transcription'],
+  languages: [
+    { name: 'English', level: 'Native or Bilingual' },
+    { name: 'Chinese', level: 'Elementary' },
+    { name: 'Portuguese', level: 'Elementary' },
+  ],
+  certifications: [
+    'Business Writing Professional Certificate by Grammarly',
+    'Getting Started with Microsoft Excel',
+    'Introduction to Data Analysis using Microsoft Excel',
+    'Business Analysis & Process Management',
+  ],
+  honors: [
+    'Excellence in Accelerated Portuguese Award',
+    'Highest 2% LAS Sophomore, Spring 2023',
+    "LAS Dean's High Impact Study Abroad Award",
+    'The Honor Society of Phi Kappa Phi - Member',
+    'Golden Key International Honour Society - Member',
+  ],
+  experience: [
+    {
+      organization: 'Iowa State University - College of Liberal Arts and Sciences',
+      role: 'English Department Content Creator',
+      period: 'February 2025 - May 2025',
+      location: 'Ames, IA',
+      highlights: [
+        'Developed clear, audience-focused print materials to promote academic programs.',
+        'Collaborated with faculty and department staff to ensure accuracy, quality, and consistency.',
+        'Designed and revised graphics and information using Adobe Creative Cloud and Canva.',
+      ],
+    },
+    {
+      organization: 'Black Sheep Golf Club Ltd',
+      role: 'Golf Course Groundskeeper',
+      period: 'June 2023 - August 2023',
+      location: 'Sugar Grove, IL',
+      highlights: [
+        'Conducted daily quality inspections and routine maintenance on greens, fairways, and bunkers.',
+        'Operated commercial landscaping equipment and utility vehicles in compliance with safety procedures.',
+        'Coordinated with groundskeeping staff to meet operational priorities and complete tasks efficiently.',
+      ],
+    },
+  ],
   education: [
-    {
-      institution: 'University of the Arts',
-      degree: 'Interdisciplinary Studies',
-      period: '2013 – 2017',
-      notes: 'A broad-based education across design, language, and communication.',
-    },
-    {
-      institution: 'Independent study',
-      degree: 'Linguistics and cultural studies',
-      period: 'Ongoing',
-      notes: 'Focused on language structure, translation, and the cultural textures behind it.',
-    },
+    { institution: 'Iowa State University', degree: 'Bachelor of Arts - Linguistics', detail: 'Minors in General Business and Chinese Studies: Languages and Cultures for Professions', period: 'August 2022 - May 2026' },
+    { institution: 'Marmion Abbey/Academy', degree: 'High School Diploma', detail: '', period: 'August 2018 - May 2022' },
+    { institution: 'Waubonsee Community College', degree: 'Dual Enrollment', detail: '', period: 'August 2020 - May 2022' },
   ],
-  skills: ['Web development', 'Design systems', 'Research', 'Writing', 'Photography', 'Project planning'],
-  learning: [
-    'Advanced Mandarin listening and speaking',
-    'Digital storytelling and editorial design',
-    'Understanding wine regions and food culture',
-    'Improving my process for building personal tools',
-  ],
-  travel: [
-    'A habit of collecting notes, sketches, and photographs while moving between cities.',
-    'Interested in regional food, architecture, language variation, and everyday rituals.',
-    'More interested in depth than speed: slower trips, long conversations, and local corners.',
-  ],
-  languages: ['English', 'French', 'Mandarin', 'Spanish (learning)'],
-  personalInterests: ['Collecting old maps', 'Finding hidden cafés', 'Listening to jazz and ambient records', 'Trying new recipes'],
 }
 
 export const projects: Project[] = [
