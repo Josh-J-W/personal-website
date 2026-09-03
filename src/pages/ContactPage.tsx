@@ -4,7 +4,7 @@ import { siteConfig } from '../data/siteData'
 export function ContactPage() {
   return (
     <>
-      <PageMeta title="Contact | Avery Quinn" description="Contact details and a simple form for reaching out." />
+      <PageMeta title="Contact | Josh Winkel" description="Contact details and a simple form for reaching out." />
       <div className="container page-shell narrow-shell">
       <header className="page-header">
         <p className="eyebrow">Contact</p>

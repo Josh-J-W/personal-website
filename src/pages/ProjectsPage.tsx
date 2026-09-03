@@ -14,7 +14,7 @@ export function ProjectsPage() {
 
   return (
     <>
-      <PageMeta title="Projects | Avery Quinn" description="A portfolio of personal projects, experiments, and creative research work." />
+      <PageMeta title="Projects | Josh Winkel" description="A portfolio of personal projects, experiments, and creative research work." />
       <div className="container page-shell">
         <header className="page-header page-header--space-between">
           <div>

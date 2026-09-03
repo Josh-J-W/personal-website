@@ -48,7 +48,7 @@ export interface BlogPost {
 }
 
 export const siteConfig = {
-  name: 'Avery Quinn',
+  name: 'Josh Winkel',
   title: 'Curious about languages, places, images, ideas, and everything in between.',
   intro:
     'I am a multidisciplinary learner who likes to collect experiences, make things, and spend time in the spaces between disciplines.',

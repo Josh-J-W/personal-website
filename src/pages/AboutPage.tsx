@@ -4,7 +4,7 @@ import { aboutSections } from '../data/siteData'
 export function AboutPage() {
   return (
     <>
-      <PageMeta title="About | Avery Quinn" description="A personal profile covering interests, education, skills, language learning, and travel." />
+      <PageMeta title="About | Josh Winkel" description="A personal profile covering interests, education, skills, language learning, and travel." />
       <div className="container page-shell">
       <header className="page-header">
         <p className="eyebrow">About</p>

@@ -9,7 +9,7 @@ export function HomePage() {
 
   return (
     <>
-      <PageMeta title="Avery Quinn | Home" description="Personal portfolio exploring travel, photography, writing, and technology." />
+      <PageMeta title="Josh Winkel | Home" description="Personal portfolio exploring travel, photography, writing, and technology." />
       <section className="hero section-spacing">
         <div className="container hero__grid">
           <div className="hero__content">

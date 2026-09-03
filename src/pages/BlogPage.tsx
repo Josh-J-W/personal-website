@@ -4,7 +4,7 @@ import { blogPosts } from '../data/siteData'
 export function BlogPage() {
   return (
     <>
-      <PageMeta title="Blog | Avery Quinn" description="Field notes, writing, reflections, and observations from a curious life." />
+      <PageMeta title="Blog | Josh Winkel" description="Field notes, writing, reflections, and observations from a curious life." />
       <div className="container page-shell">
       <header className="page-header">
         <p className="eyebrow">Writing</p>

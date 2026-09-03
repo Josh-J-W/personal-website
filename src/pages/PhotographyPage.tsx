@@ -30,7 +30,7 @@ export function PhotographyPage() {
 
   return (
     <>
-      <PageMeta title="Photography | Avery Quinn" description="Visual notes from travels, streets, landscapes, and daily observations." />
+      <PageMeta title="Photography | Josh Winkel" description="Visual notes from travels, streets, landscapes, and daily observations." />
       <div className="container page-shell">
         <header className="page-header page-header--space-between">
           <div>
