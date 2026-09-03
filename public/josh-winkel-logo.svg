@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 768" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">Josh Winkel logo</title>
+  <defs>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#71308a" />
+      <stop offset="1" stop-color="#c658e8" />
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b5d65" />
+      <stop offset="1" stop-color="#4ed5df" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#violet)" d="M205 277h229L320 477 205 277Z" />
+  <path fill="url(#violet)" d="M148 375h229L263 573 148 375Z" />
+  <path fill="url(#cyan)" d="M377 375h229L491 573 377 375Z" />
+  <path fill="url(#cyan)" d="M263 375h229L377 573 263 375Z" />
+</svg>

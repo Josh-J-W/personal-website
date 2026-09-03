@@ -8,7 +8,9 @@ export function Layout() {
       <header className="topbar">
         <div className="topbar__inner container">
           <NavLink to="/" className="brand" aria-label="Go to home page">
-            <span className="brand__mark">JW</span>
+            <span className="brand__mark">
+              <img src={`${import.meta.env.BASE_URL}josh-winkel-logo.svg`} alt="" />
+            </span>
             <span className="brand__text">{siteConfig.name}</span>
           </NavLink>
 

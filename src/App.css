@@ -74,6 +74,12 @@
   letter-spacing: 0.12em;
 }
 
+.brand__mark img {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+
 .brand__text {
   letter-spacing: 0.02em;
 }
